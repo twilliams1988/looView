@@ -1,0 +1,4 @@
+%p= @loo.title
+
+= link_to "Edit #{@loo.title}", edit_loo_path(@loo)
+= link_to "Delete #{@loo.title}", loo_path(@loo), method: :delete

@@ -1,3 +1,12 @@
 Welcome to looView
 
-%a(href='#') Upload a loo with a view
+- if @loos.any?
+  - @loos.each do |loo|
+    = link_to loo.title, loo_path(loo)
+    = link_to "Comment", new_loo_comment_path(loo)
+- else
+  No loos with views posted
+
+-# = image_tag loo.image.url(:thumb)
+
+%a(href='loos/new') Upload a loo with a view

@@ -1,0 +1,6 @@
+= form_for @loo, html: {multipart: true} do |f|
+  = f.label :title
+  = f.text_field :title
+  = f.label :picture
+  = f.file_field :picture
+  = f.submit
